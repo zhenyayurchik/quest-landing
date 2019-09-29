@@ -1,0 +1,20 @@
+{
+  "name": "waxom-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/kutsur/waxom-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/kutsur/waxom-landing/issues"
+  },
+  "homepage": "https://gitlab.com/kutsur/waxom-landing#readme"
+}
