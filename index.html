@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <title>Quest</title>
 </head>
+
 <body>
 
   <header class="header">
@@ -29,18 +31,17 @@
 
   <section class="intro">
     <div class="container">
-      <h2>Трёхлистный клевер</h2>
-      <h1>Единственный городской квест в Гомеле</h1>
-      <p>Найди и разгадай все загадки гомельской ложи массонов</p>
+      <h2>Первый городской квест в Гомеле</h2>
+      <h1>Трёхлистный клевер</h1>
       <a class="btnGetStarted" href="#">Забронировать</a>
     </div>
   </section>
 
   <section class="block__info">
     <div class="container">
-      <img src="images/handWithIphone.png">
+      <img src="images/handWithIphone.png" alt="pic1">
       <div class="text__block">
-        <h1>Информация о квесте</h1>
+        <h2>Легенда квеста</h2>
         <p>Европа на гране войны из-за глобальной природной катастрофы. Группа местных краеведов узнала, что в Гомеле ещё в начале прошлого века существовала масонская ложа, которая предсказала катастрофу и разработала способ её предотвращения. Но как спасти «Старый свет», когда о масонах уже более 100 лет ничего не слышно в городе?</p>
       </div>
     </div>
@@ -49,19 +50,19 @@
   <section class="block__rules">
     <div class="container">
       <div class="item">
-          <h5>228 BYN</h5>
+          <h3>228 BYN</h3>
           <p>Стоимость квеста для одного участника</p>
         </div>
         <div class="item">
-          <h5>От 1 до 5 чел.</h5>
+          <h3>От 1 до 5 чел.</h3>
           <p>Количесвто участников в одном квесте</p>
         </div>
         <div class="item">
-          <h5>3 часа 30 мин.</h5>
+          <h3>3 часа 30 мин.</h3>
           <p>Продолжительность одного квеста</p>
         </div>
         <div class="item">
-          <h5>ул. Комсомольская, 9</h5>
+          <h3>ул. Комсомольская, 9</h3>
           <p>Место старта. Это сквер напротив БелГУТа</p>
         </div>
     </div>
@@ -163,12 +164,25 @@
   </section>
 
   <section class="block__form">
-      <div class="container"></div>
+    <div class="container">
+        <img src="images/handWithIphone.png" alt="pic2">
+          <form id="id-form" action="send/send.php" method="post" class="form">
+            <input type="text" name="name" class="name entry " placeholder="Имя и фамилия"/>
+            <input type="email" name="email" class="email entry" placeholder="exemple@mail.com"/>
+            <input type="tel" name="tel" class="tel entry" placeholder="+375 ** *******"/>
+            <div class="g-recaptcha" data-sitekey="6LfOJLsUAAAAABYf8phpyS5i3_3jOKiFqlYspEuM"></div>
+            <input type="submit" class="submit entry" value="Отправить"/>
+            <div class="answer"></div>
+          </form>
+          <div class="shadow"></div>
+    </div>
   </section>
 
- 
-
-
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src="jquery-validation/lib/jquery.js"></script>
+	<script src="jquery-validation/lib/jquery.form.js"></script>
+	<script src="jquery-validation/dist/jquery.validate.js"></script>
+  <script src="./js/ajax-form.js"></script>
 </body>
 </html>
 
