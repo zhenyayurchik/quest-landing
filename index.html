@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quest</title>
 </head>
 
@@ -20,34 +21,33 @@
               <img src="./images/logo.png" alt="logo">
             </div>
             <ul class="menu">
-              <li><a class="menu__item" href="#">О квесте</a></li>
-              <li><a class="menu__item" href="#">Расписание</a></li>
-              <li><a class="menu__item" href="#">Правила</a></li>
-              <li><a class="menu__item" href="#">Забронировать</a></li>
+              <li><a class="menu__item" href="#info">О квесте</a></li>
+              <li><a class="menu__item" href="#items">Правила</a></li>
+              <li><a class="menu__item" href="#table">Расписание</a></li>
+              <li><a class="menu__item" href="#form">Забронировать</a></li>
             </ul>
           </nav>
     </div>
   </header>
 
-  <section class="intro">
+  <section class="intro" id="intro">
     <div class="container">
       <h2>Первый городской квест в Гомеле</h2>
       <h1>Трёхлистный клевер</h1>
-      <a class="btnGetStarted" href="#">Забронировать</a>
+      <a class="btnGetStarted" href="#form">Забронировать</a>
     </div>
   </section>
-
-  <section class="block__info">
+  <section class="block__info" id="info">
     <div class="container">
       <img src="images/handWithIphone.png" alt="pic1">
       <div class="text__block">
         <h2>Легенда квеста</h2>
-        <p>Европа на гране войны из-за глобальной природной катастрофы. Группа местных краеведов узнала, что в Гомеле ещё в начале прошлого века существовала масонская ложа, которая предсказала катастрофу и разработала способ её предотвращения. Но как спасти «Старый свет», когда о масонах уже более 100 лет ничего не слышно в городе?</p>
+        <p>Мир на гране войны из-за глобальной природной катастрофы. Группа местных краеведов узнала, что в Гомеле ещё в начале прошлого века существовала масонская ложа, которая предсказала катастрофу и разработала способ её предотвращения. Но как спасти Землю, когда о масонах уже более 100 лет ничего не слышно в городе?</p>
       </div>
     </div>
   </section>
 
-  <section class="block__rules">
+  <section class="block__items" id="items">
     <div class="container">
       <div class="item">
           <h3>228 BYN</h3>
@@ -68,11 +68,35 @@
     </div>
   </section>
 
-  <section class="block__timetable">
+  <section class="block__rules" id="rules">
+    <div class="container">
+      <h2>Правила квеста</h2>
+      <div class="wrapper">
+          <div class="rule">
+              <p>Запрещено ломать предметы и причинять вред городским объектам во время квеста.</p>
+            </div>
+            <div class="rule">
+              <p>Нужно соблюдать правила дорожного движения и быть аккуратным возле дорог.</p>
+            </div>
+            <div class="rule">
+              <p>Запрещено проходить квест в состоянии алкогольного или наркотического опьянения.</p>
+            </div>
+            <div class="rule">
+              <p>Для прохождения квеста нужно завести аккаунт в мессенджере Telegram.</p>
+            </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  
+
+  <section class="block__timetable" id="table">
     <div class="container">
       <div class="text__block">
           <h2>Расписание квестов</h2>
-          <p>Подбирайте удобное время и бронируйте квест по форме ниже.</p>
+          <p>Выбирайте удобное время и бронируйте квест по форме ниже.</p>
       </div>
       <div class="table">
           <div class="table__block">
@@ -163,26 +187,42 @@
     </div>
   </section>
 
-  <section class="block__form">
+
+  <section class="block__form" id="form">
     <div class="container">
-        <img src="images/handWithIphone.png" alt="pic2">
-          <form id="id-form" action="send/send.php" method="post" class="form">
-            <input type="text" name="name" class="name entry " placeholder="Имя и фамилия"/>
-            <input type="email" name="email" class="email entry" placeholder="exemple@mail.com"/>
-            <input type="tel" name="tel" class="tel entry" placeholder="+375 ** *******"/>
-            <div class="g-recaptcha" data-sitekey="6LfOJLsUAAAAABYf8phpyS5i3_3jOKiFqlYspEuM"></div>
-            <input type="submit" class="submit entry" value="Отправить"/>
-            <div class="answer"></div>
-          </form>
-          <div class="shadow"></div>
+      <img src="images/form_img.jpg" alt="pic1">
+      <div class="form__item">
+        <form id="id-form" action="send/send.php" method="post" class="form">
+          <input type="text" name="name" class="name entry " placeholder="Имя и фамилия"/>
+          <input type="email" name="email" class="email entry" placeholder="exemple@mail.com"/>
+          <input type="tel" name="tel" class="tel entry" placeholder="+375 ** *******"/>
+          <div class="g-recaptcha" data-sitekey="6LfOJLsUAAAAABYf8phpyS5i3_3jOKiFqlYspEuM"></div>
+          <input type="submit" class="submit entry" value="Отправить"/>
+          <div class="answer"></div>
+        </form>
+      </div>
     </div>
   </section>
+
+  <footer>
+    <div class="tblock">
+      <p>&copy; 2019 All rights reserved</p>
+      <p>Site by Zhenya Yurchyk</p>
+    </div>
+    <div class="link">
+      <a href="">
+        <img src="./images/vk-logo.png" alt="">
+      </a>
+    </div>
+    
+  </footer>
 
   <script src='https://www.google.com/recaptcha/api.js'></script>
 	<script src="jquery-validation/lib/jquery.js"></script>
 	<script src="jquery-validation/lib/jquery.form.js"></script>
 	<script src="jquery-validation/dist/jquery.validate.js"></script>
   <script src="./js/ajax-form.js"></script>
+  <script src="./jquery/scroll.js"></script>
 </body>
 </html>
 
