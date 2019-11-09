@@ -11,6 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	$message = '<html><head><title>'.$subject.'</title></head><body>
 			Имя: '.$name.'<br>
 			Телефон: '.$tel.'<br>
+			Email: '.$email.'<br>
 </body></html>';
 
 	$headers="MIME-Version: 1.0\r\n"
